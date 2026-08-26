@@ -2,7 +2,7 @@
 
 > **开发中（WIP）**：功能尚未稳定，接口可能变更，代码可能存在缺陷或未充分测试的路径。请勿直接用于生产环境，使用前请自行审查并在目标硬件上验证。
 
-> **AI 生成声明**：`host.js` 与 `client.js` 主要由 AI 编程助手辅助生成与调试，可能包含逻辑错误或未经充分安全审计，尤其涉及硬件控制、串口通信与文件系统操作。发现问题欢迎提交 Issue 或 Pull Request。
+> **AI 生成声明**：`lib/host.js` 与 `lib/client.js` 主要由 AI 编程助手辅助生成与调试，可能包含逻辑错误或未经充分安全审计，尤其涉及硬件控制、串口通信与文件系统操作。发现问题欢迎提交 Issue 或 Pull Request。
 
 CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件）：悬浮面板 + 11 个模型工具，基于官方 USBDBG 协议（参考 `kendryte/canmv-vscode-extension` 实现）。
 
@@ -21,8 +21,8 @@ CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件�
 
 | 文件 | 说明 |
 |------|------|
-| `host.js` | Host 半侧源码（`code.host`）：模型工具 + 面板 RPC + USBDBG 活动会话 |
-| `client.js` | Client 半侧源码（`code.client`）：悬浮面板 + 设置页 |
+| `lib/host.js` | Host 半侧源码（`code.host`）：模型工具 + 面板 RPC + USBDBG 活动会话 |
+| `lib/client.js` | Client 半侧源码（`code.client`）：悬浮面板 + 设置页 |
 | `LICENSE` | 项目许可（MIT） |
 | `THIRD_PARTY_NOTICES` | 第三方声明（USBDBG 协议参考自 canmv-vscode-extension，BSD-3-Clause） |
 | `CHANGELOG.md` | 版本记录 |
@@ -32,8 +32,8 @@ CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件�
 
 用 `cordis_define`（kind `new`，idPrefix `canmv`）提交：
 
-- `code.host` = `host.js` 全文
-- `code.client` = `client.js` 全文（两半必须同时提供，漏任一半会成为无功能包）
+- `code.host` = `lib/host.js` 全文
+- `code.client` = `lib/client.js` 全文（两半必须同时提供，漏任一半会成为无功能包）
 
 然后 `cordis_run` 激活；Client 半侧首次激活需页面审批。
 
