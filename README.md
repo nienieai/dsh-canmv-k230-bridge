@@ -26,6 +26,10 @@ CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件�
 | `LICENSE` | 项目许可（MIT） |
 | `THIRD_PARTY_NOTICES` | 第三方声明（USBDBG 协议参考自 canmv-vscode-extension，BSD-3-Clause） |
 | `CHANGELOG.md` | 版本记录 |
+| `package.json` | 包元数据（name/version/license） |
+| `.gitignore` | 忽略运行产物 |
+| `docs/REGISTRIES.md` | 社区市场上架说明 |
+| `tools/syntax-check.mjs` | 语法检查脚本 |
 | `CONTRIBUTING.md` | 贡献指南 |
 
 ## 使用（作为 DSH 动态插件）

@@ -1,0 +1,53 @@
+{
+  "name": "dsh-canmv-k230-bridge",
+  "version": "0.1.0",
+  "description": "DSH dynamic plugin: bridge for CanMV K230 board (floating panel + serial script run & preview)",
+  "license": "MIT",
+  "author": {
+    "name": "nienieai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nienieai/dsh-canmv-k230-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nienieai/dsh-canmv-k230-bridge/issues"
+  },
+  "homepage": "https://github.com/nienieai/dsh-canmv-k230-bridge#readme",
+  "type": "module",
+  "main": "./lib/host.js",
+  "exports": {
+    "./host": "./lib/host.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "README.md",
+    "THIRD_PARTY_NOTICES"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "scripts": {
+    "check": "node --check lib/host.js && node --check lib/client.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "canmv",
+    "k230",
+    "cordis",
+    "serial",
+    "camera"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}
