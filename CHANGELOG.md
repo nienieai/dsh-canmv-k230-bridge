@@ -2,9 +2,9 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
-## [12.27] - 当前
+## [0.1.0] - 首版
 
-Host v12.18 + Client v12.23
+内部版本：Host v12.18 + Client v12.23
 
 ### 新增
 - 客户端 v12.23：设置页「CanMV」可开关悬浮窗（模块级可见性 + 订阅广播，设置页与悬浮窗实时同步）

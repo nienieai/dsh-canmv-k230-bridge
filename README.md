@@ -3,7 +3,7 @@
 CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件）：
 **悬浮面板** + **11 个模型工具**，基于官方 USBDBG 协议（参考 `kendryte/canmv-vscode-extension` 实现）。
 
-当前版本：**v12.27**（host v12.18 + client v12.23）
+当前版本：**0.1.0**（内部：host v12.18 + client v12.23）
 
 ## 特性
 
