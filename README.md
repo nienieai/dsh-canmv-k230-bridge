@@ -1,5 +1,19 @@
 # dsh-canmv-k230-bridge
 
+> ⚠️ **开发中（WIP）**
+>
+> 本插件目前处于**活跃开发阶段**，功能尚未完全稳定，接口可能在**不预先通知的情况下变更**。
+> 代码可能存在质量缺陷、未充分测试的路径或边界条件遗漏。**请勿直接用于生产环境或关键任务。**
+> 使用前请自行审查并在目标硬件上充分验证。
+
+> 🤖 **AI 生成声明**
+>
+> 本项目（`host.js` 与 `client.js`）主要由 **AI 编程助手辅助生成与调试**。AI 生成的代码可能包含
+> 逻辑错误、未处理的异常或未经过充分的安全审计。尤其涉及**硬件控制、串口通信与文件系统操作**，
+> 使用前请务必人工复核。如果你发现问题，欢迎提交 Issue 或 Pull Request。
+
+---
+
 CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件）：
 **悬浮面板** + **11 个模型工具**，基于官方 USBDBG 协议（参考 `kendryte/canmv-vscode-extension` 实现）。
 
@@ -81,9 +95,15 @@ CanMV K230 开发板桥接插件（DeepSeek Harness / DSH 动态 Cordis 插件�
 - 动态插件为进程级：DSH 重启后需重新 `cordis_define` + `cordis_run`
 - `canmv_exec` 单次 ≤ 8KB；大脚本走面板「运行脚本」或 `canmv_runfile`
 - 沙箱需 workspace-write（FullLanguage）模式
+- 硬件操作存在风险：错误命令可能对开发板/存储造成影响，请谨慎使用
 
 ## 许可
 
 本项目基于 **MIT License**（见 `LICENSE`）。USBDBG 协议实现参考自
 `kendryte/canmv-vscode-extension`（BSD-3-Clause，© Canaan Bright Sight Co., Ltd 2026），
 详见 `THIRD_PARTY_NOTICES`。
+
+## 致谢
+
+- [kendryte/canmv-vscode-extension](https://github.com/kendryte/canmv-vscode-extension) — USBDBG 协议参考
+- [DeepSeek Harness (DSH)](https://github.com/) — 插件运行平台
